@@ -2,7 +2,7 @@ require 'thor'
 
 require File.expand_path('../application', __FILE__)
 
-module Tst
+module TimeHipster
   class CLI < Thor
     desc 'start PROJECT-ID', 'Start time tracking of PROJECT-ID'
     def start_project(project_id)

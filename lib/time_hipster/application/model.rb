@@ -1,6 +1,6 @@
 require 'ostruct'
 
-module Tst
+module TimeHipster
   module Application
     class Model < OpenStruct
       class << self

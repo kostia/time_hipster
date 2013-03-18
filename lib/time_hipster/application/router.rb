@@ -1,4 +1,4 @@
-module Tst
+module TimeHipster
   module Application
     class Router
       NotFound = Class.new(ArgumentError)

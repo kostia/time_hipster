@@ -1,6 +1,6 @@
 require 'yaml'
 
-module Tst
+module TimeHipster
   module Application
     class Database < Struct.new(:path)
       def self.load_file(path)

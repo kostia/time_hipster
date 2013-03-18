@@ -1,4 +1,4 @@
-module Tst
+module TimeHipster
   module Application
     class ProjectsController < Controller
       def start

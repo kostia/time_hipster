@@ -7,7 +7,7 @@ Dir[File.expand_path('../application/controllers/*', __FILE__)].map &method(:loa
 require File.expand_path('../application/model', __FILE__)
 Dir[File.expand_path('../application/models/*', __FILE__)].map &method(:load)
 
-module Tst
+module TimeHipster
   module Application
     class << self
       attr_reader :database
