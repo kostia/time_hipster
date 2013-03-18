@@ -7,6 +7,8 @@ Dir[File.expand_path('../application/controllers/*', __FILE__)].map &method(:loa
 require File.expand_path('../application/model', __FILE__)
 Dir[File.expand_path('../application/models/*', __FILE__)].map &method(:load)
 
+require File.expand_path('../application/view', __FILE__)
+
 module TimeHipster
   module Application
     class << self
@@ -22,10 +24,8 @@ module TimeHipster
       end
 
       def call(request)
-        handle_errors do
-          controller_class, action_name, params = Router.new.route(request)
-          controller_class.new(params).send(action_name)
-        end
+        controller_class, action_name, params = Router.new.route(request)
+        controller_class.new(params).process(action_name)
       end
 
       def log(message)
@@ -40,12 +40,6 @@ module TimeHipster
 
       def initialize_database!
         @database = Database.load_file(root + 'db.yml')
-      end
-
-      def handle_errors
-        yield
-      rescue Exception => e
-        e.message
       end
     end
   end
