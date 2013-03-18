@@ -4,11 +4,13 @@ module TimeHipster
       def start
         load_project
         @project.start(current_timestamp)
+        :ok
       end
 
       def stop
         load_project
         @project.stop(current_timestamp)
+        :ok
       end
 
       private

@@ -45,7 +45,7 @@ module TimeHipster
       def handle_errors
         yield
       rescue Exception => e
-        puts e.message
+        e.message
       end
     end
   end

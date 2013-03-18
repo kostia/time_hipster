@@ -18,7 +18,7 @@ module TimeHipster
 
     def call(project_id, action_name)
       Application.run
-      Application.call("/projects/#{project_id}/#{action_name}")
+      puts(Application.call("/projects/#{project_id}/#{action_name}"))
     end
   end
 end
