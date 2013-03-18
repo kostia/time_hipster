@@ -13,7 +13,7 @@ module TimeHipster
       attr_reader :database
 
       def root
-        @root ||= Pathname.new(File.join(ENV['HOME'], %w[.config tst]))
+        @root ||= Pathname.new(File.join(ENV['HOME'], %w[.config time_hipster]))
       end
 
       def run
